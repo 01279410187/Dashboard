@@ -106,13 +106,12 @@ const OrdersTableMore: React.FC = () => {
 
   return (
     <div className="">
-      {/* Search and Actions */}
-      <div className="flex justify-center items-center mb-4 mt-5 max-w-7xl space-x-7">
+      <div className="flex flex-col lg:flex-row justify-center items-center mb-4 mt-5 max-w-7xl space-y-4 lg:space-y-0 lg:space-x-7">
         <SearchInput
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
           placeholder="Search For Entities"
-          className="w-1/3"
+          className="w-full lg:w-1/3"
         />
         <div className="flex gap-2">
           <Button className="bg-[#5D469F] hover:bg-[#9c8acf]">
@@ -128,6 +127,7 @@ const OrdersTableMore: React.FC = () => {
           </Button>
         </div>
       </div>
+
       <div className="w-full max-w-5xl mx-auto p-6 bg-white rounded-lg shadow mt-8">
         {/* Orders Table */}
         <Table>
